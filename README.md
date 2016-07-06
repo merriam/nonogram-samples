@@ -22,6 +22,50 @@ emphasis is on clear and concise documentation in advance of code.  Having pract
 dozen different methods of developing code, I am experimenting with this method.  Granted,
 this project will have little executable code.
 
-# JSON Format
+# Format of the JSON data files
 
-A JSON format file provides an easy way of importing a structured data.   More coming.
+## JSON?
+
+JSON, **J**ava**S**cript **O**bject **N**otation, (https://en.wikipedia.org/wiki/JSON) is a 
+format providing a human readable format for transmitting data across a wide
+variety of languages.   Note that JSON allows unicode but no dates, comments, 
+or executable JavaScript code.   All fieldnames will be lowercase without spaces or underscore.
+
+## Nonograms terms
+
+A Nonogram puzzle consists of a set of cells, each initially a colorless blank, that
+will be filled with colors in accordance with the clues.   The traditional Nonogram
+has two *dimensions*, rows and columns; a *color range* of two, black and white; 
+a *slack color* of white, which is the color not specified in clues; and a clue for
+each row or column being a sequence of numbers specifying the number of continuous
+(black) cells separated by a positive number of slack color (white) cells.   The puzzle
+may have no solution, a *unique* solution, or many solutions.
+
+## The Overall format
+
+Each file is one large dictionary.
+
+```
+  header
+    info
+      name  no unique requirement
+      description
+      author/authors
+      version
+         number
+        date
+        author
+        comment
+    common
+    puzzles [
+      comment
+      sizes
+      colors
+      analysis
+      clues
+      numbersolutions
+      solutions
+    ]
+  ]
+  
+  ```
