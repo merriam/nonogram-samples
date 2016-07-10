@@ -38,10 +38,10 @@ Topic Article:  Goals of this project
 This project aspires to provide a free and easy to use set of Nonogram puzzles to test 
 algorithms.  As consensus arises, the puzzles will also include difficulty rankings.
 
-This project also hopes to be an exercise in Documentation Driven Development, where 
-emphasis is on clear and concise documentation in advance of code.  Having practiced a
-dozen different methods of developing code, I am experimenting with this method.  Granted,
-this project will have little executable code.
+This project also hopes to be an exercise in Documentation Driven Development.  I ran
+across this methodology from [Daniele Procida's talk a PyCon](https://www.youtube.com/watch?v=bQSR1UpUdFQ)
+and am experimenting with this method.  Granted,
+this project will has little executable code.
 
 # Tutorial
 
@@ -123,6 +123,21 @@ These fields are optional for each puzzle:
 * `colormap`:  A dictionary mapping characters in colors to display colors.   Each key will be a single character and each value will be an rgb string in the form of `#rgb` or `#rrggbb`.
 * `solution` or `solutions`:  One or more solutions to the puzzle as strings.  These will be a set of strings, in row-major order, for all solutions to the puzzle.
 * Other fields such as `difficulty` or `rating` may be used, but these have no meanings as of this time.
+
+## Topic Article:  Directory Structure
+
+* *.md   Documentation files
+* json/     The JSON files
+* json/all_sets.txt    A generated list of all puzzle sets in the repository.
+* json/combined_all_sets.json  A generated file combining of all puzzles of all puzzle sets.
+* json/traditional.txt  A generated list of all sets of solvable, black and white rectangular puzzles.
+* json/combined_traditional.json  A generated file combining all puzzles of all traditional sets.
+* json/sets/*.json  The puzzle sets.  Each set contains multiple puzzles.
+* tools/   The tools for manipulating JSON files
+* tools/list   Make a list of all JSON puzzle sets
+* tools/common  Put common items into the common section of a puzzle set
+* tools/check   Check that JSON file format is correctly parsable as a puzzle set
+* tools/select  Set puzzles or puzzle sets from a query
 
 # Illustrated Example
 
