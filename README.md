@@ -1,7 +1,27 @@
-# nonogram-samples
-Nonogram Puzzles (aka Picross, Hanjie, and Griddlers) samples in JSON format.
+nonogram-samples
+===
 
-## Overview of Nonogram puzzles
+Nonogram Puzzles (aka Picross, Hanjie, and Griddlers) in JSON format.   This
+package contains puzzles in JSON format and a set of tools for this format.  I
+hope you find this repository useful as you write nonogram solvers and analyzers.
+
+Most puzzles here are traditional, rectangular, single-solution, black and white puzzles.
+Some more exotic puzzles are also availabe.
+
+
+How to Use the Documentation
+--
+
+People learn in a variety of ways.  Here are some ways to learn about this repository.
+
+* Tutorial, a step by step guide to the format and tools
+* Quick reference sheet
+* Illustrated Examples
+* Topic Articles for nonogram terminology, tools, and the data format.
+
+
+Topic Article:  Overview of Nonogram puzzles
+--
 
 Nonogram puzzles are also called Picross, Hanjie, and Griddler puzzles.  These
 are logic puzzles in which cells in a grid must be colored or left blank according 
@@ -12,7 +32,8 @@ These puzzles provide interesting exercises in solving problems for which brute 
 be an answer.  For example, a single, black and white, length 20 row, with the clues "1 1 1 1"
 has millions of possiblities.  Many nanogram solvers exist.
 
-# Goals of this project
+Topic Article:  Goals of this project
+--
 
 This project aspires to provide a free and easy to use set of Nonogram puzzles to test 
 algorithms.  As consensus arises, the puzzles will also include difficulty rankings.
@@ -22,7 +43,7 @@ emphasis is on clear and concise documentation in advance of code.  Having pract
 dozen different methods of developing code, I am experimenting with this method.  Granted,
 this project will have little executable code.
 
-# Format of the JSON data files
+# Tutorial
 
 ## JSON?
 
@@ -43,7 +64,7 @@ may have no solution, a *unique* solution, or many solutions.
 
 [ ] Add a graphic of three nanograms with terms highlighted.
 
-## The Format In Depth
+## Topic Article: The Format In Depth
 
 Each file represent one set of puzzles and is represented as one large dictionary with three 
 top level keys:  `header`, `common`, and `puzzles`.  The `header` contains human readable 
@@ -103,6 +124,6 @@ These fields are optional for each puzzle:
 * `solution` or `solutions`:  One or more solutions to the puzzle as strings.  These will be a set of strings, in row-major order, for all solutions to the puzzle.
 * Other fields such as `difficulty` or `rating` may be used, but these have no meanings as of this time.
 
-## Examples With Explanations
+# Illustrated Example
 
 [ ] Todo
